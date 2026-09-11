@@ -1,251 +1,277 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Quem são os nômades digitais?</title>
+    <title>Quem são os nômades digitais?</title>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #ffd6e7, #ffb6d5, #ffe6f0);
-    color: #5c2140;
-    overflow-x: hidden;
-}
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
 
-/* CABEÇALHO */
+            background: linear-gradient(
+                135deg,
+                #ffd6e7,
+                #ffb6d5,
+                #ffeaf3
+            );
 
-header {
-    text-align: center;
-    padding: 50px 20px 30px;
-}
+            color: #5c2140;
+            overflow-x: hidden;
+        }
 
-header h1 {
-    font-family: "Brush Script MT", cursive;
-    font-size: 58px;
-    color: #d63384;
+        /* ================= CABEÇALHO ================= */
 
-    text-shadow:
-        2px 2px 5px white,
-        0 0 15px #ff69b4,
-        0 0 30px #ff9fc6;
-}
+        header {
+            text-align: center;
+            padding: 40px 20px 25px;
+        }
 
-header p {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #7a3154;
-}
+        header h1 {
+            font-family: "Brush Script MT", cursive;
 
-/* CONTEÚDO */
+            font-size: 55px;
 
-.container {
-    width: 90%;
-    max-width: 950px;
-    margin: auto;
-}
+            color: #d63384;
 
-.caixa {
-    background: rgba(255,255,255,0.94);
+            text-shadow:
+                2px 2px 5px white,
+                0 0 15px #ff69b4,
+                0 0 25px #ff9fc6;
+        }
 
-    border: 2px solid #ff9fc6;
-    border-radius: 25px;
+        header p {
+            margin-top: 8px;
 
-    padding: 25px;
-    margin-bottom: 25px;
+            font-size: 18px;
 
-    box-shadow:
-        0 8px 20px rgba(180,70,120,0.2);
+            color: #7a3154;
+        }
 
-    transition: 0.3s;
-}
+        /* ================= CONTEÚDO ================= */
 
-.caixa:hover {
-    transform: translateY(-5px);
+        .container {
+            width: 90%;
+            max-width: 950px;
 
-    box-shadow:
-        0 12px 25px rgba(180,70,120,0.3);
-}
+            margin: auto;
+        }
 
-.caixa h2 {
-    color: #d63384;
-    margin-bottom: 15px;
-    font-size: 25px;
-}
+        .caixa {
+            background: rgba(255, 255, 255, 0.94);
 
-.caixa p {
-    font-size: 17px;
-    line-height: 1.7;
-    text-align: justify;
-}
+            border: 2px solid #ff9fc6;
 
-/* PERGUNTAS */
+            border-radius: 25px;
 
-.pergunta h2 {
-    color: #c2185b;
-    font-size: 20px;
-}
+            padding: 25px;
 
-/* RODAPÉ */
+            margin-bottom: 25px;
 
-footer {
-    text-align: center;
+            box-shadow:
+                0 8px 20px rgba(180, 70, 120, 0.2);
 
-    padding: 35px 15px;
+            transition: 0.3s;
+        }
 
-    color: #8a3158;
-    font-weight: bold;
-    font-size: 16px;
-}
+        .caixa:hover {
+            transform: translateY(-5px);
 
-/* RESPONSIVO */
+            box-shadow:
+                0 12px 25px rgba(180, 70, 120, 0.3);
+        }
 
-@media (max-width: 600px) {
+        .caixa h2 {
+            color: #d63384;
 
-    header h1 {
-        font-size: 42px;
-    }
+            margin-bottom: 15px;
 
-    header p {
-        font-size: 16px;
-    }
+            font-size: 25px;
+        }
 
-    .caixa {
-        padding: 20px;
-    }
+        .caixa p {
+            font-size: 17px;
 
-    .caixa h2 {
-        font-size: 21px;
-    }
+            line-height: 1.7;
 
-    .caixa p {
-        font-size: 16px;
-    }
-}
-</style>
+            text-align: justify;
+        }
 
+        /* ================= PERGUNTAS ================= */
+
+        .pergunta h2 {
+            color: #c2185b;
+
+            font-size: 20px;
+        }
+
+        /* ================= RODAPÉ ================= */
+
+        footer {
+            text-align: center;
+
+            padding: 30px 15px;
+
+            color: #8a3158;
+
+            font-weight: bold;
+        }
+
+        /* ================= CELULAR ================= */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 40px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .caixa {
+                padding: 20px;
+            }
+
+            .caixa h2 {
+                font-size: 21px;
+            }
+
+            .caixa p {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- CABEÇALHO -->
+    <!-- ================= CABEÇALHO ================= -->
 
-<header>
+    <header>
 
-    <h1>
-        🎀 Quem são os nômades digitais? 🎀
-    </h1>
-
-    <p>
-        Tecnologia, liberdade e novas formas de trabalhar
-    </p>
-
-</header>
-
-
-<!-- CONTEÚDO -->
-
-<main class="container">
-
-    <section class="caixa">
-
-        <h2>
-            🌸 Quem são os nômades digitais?
-        </h2>
+        <h1>
+            Quem são os nômades digitais?
+        </h1>
 
         <p>
-            Os nômades digitais são profissionais que adotam um estilo
-            de vida flexível e independente, aproveitando as tecnologias
-            para trabalhar remotamente de qualquer lugar do mundo.
+            Tecnologia, liberdade e novas formas de trabalhar
         </p>
 
-        <br>
-
-        <p>
-            Esses profissionais valorizam a liberdade de escolher seus
-            ambientes de trabalho, que podem variar desde seus domicílios
-            até cafés acolhedores e salas de trabalho comunitárias.
-        </p>
-
-        <br>
-
-        <p>
-            A capacidade de gerenciar tempo e espaço é fundamental para eles,
-            permitindo um equilíbrio entre trabalho e estilo de vida.
-        </p>
-
-    </section>
+    </header>
 
 
-    <section class="caixa pergunta">
+    <!-- ================= CONTEÚDO ================= -->
 
-        <h2>
-            1. Como os nômades digitais se diferenciam de outros trabalhadores?
-        </h2>
+    <main class="container">
 
-        <p>
-            Os nômades digitais podem trabalhar de forma remota e não
-            dependem de um local fixo. Eles utilizam a tecnologia para
-            realizar suas atividades profissionais e possuem maior
-            flexibilidade para escolher onde trabalhar.
-        </p>
+        <!-- TEXTO PRINCIPAL -->
 
-    </section>
+        <section class="caixa">
 
+            <h2>
+                🌸 Quem são os nômades digitais?
+            </h2>
 
-    <section class="caixa pergunta">
+            <p>
+                Os nômades digitais são profissionais que adotam um estilo
+                de vida flexível e independente, aproveitando as tecnologias
+                para trabalhar remotamente de qualquer lugar do mundo.
+            </p>
 
-        <h2>
-            2. Dê exemplos de tecnologias que tornam possível o trabalho
-            dos nômades digitais.
-        </h2>
+            <br>
 
-        <p>
-            Computadores, smartphones, internet, videoconferências,
-            armazenamento em nuvem, aplicativos de comunicação e
-            ferramentas de organização e gerenciamento de tarefas.
-        </p>
+            <p>
+                Esses profissionais valorizam a liberdade de escolher seus
+                ambientes de trabalho, que podem variar desde seus domicílios
+                até cafés acolhedores e salas de trabalho comunitárias.
+            </p>
 
-    </section>
+            <br>
 
+            <p>
+                A capacidade de gerenciar tempo e espaço é fundamental para eles,
+                permitindo um equilíbrio entre trabalho e estilo de vida.
+            </p>
 
-    <section class="caixa pergunta">
-
-        <h2>
-            3. Você conhece alguém que trabalha de modo remoto?
-            O que essa pessoa faz e onde ela trabalha?
-        </h2>
-
-        <p>
-            Sim. Uma pessoa pode trabalhar com programação, atendimento
-            ao cliente ou outras atividades digitais. Ela pode trabalhar
-            de casa, em um café ou em outro local com acesso à internet.
-        </p>
-
-    </section>
-
-</main>
+        </section>
 
 
-<!-- RODAPÉ -->
+        <!-- ================= PERGUNTA 1 ================= -->
 
-<footer>
+        <section class="caixa pergunta">
 
-    🎀 Trabalho sobre Tecnologia e Nômades Digitais 🎀
+            <h2>
+                1. Como os nômades digitais se diferenciam de outros trabalhadores?
+            </h2>
 
-    <br><br>
+            <p>
+                Os nômades digitais podem trabalhar de forma remota e não
+                dependem de um local fixo. Eles utilizam a tecnologia para
+                realizar suas atividades profissionais e possuem maior
+                flexibilidade para escolher onde trabalhar.
+            </p>
 
-    Evelym Caroliny Felipe de Sousa 💗
+        </section>
 
-</footer>
+
+        <!-- ================= PERGUNTA 2 ================= -->
+
+        <section class="caixa pergunta">
+
+            <h2>
+                2. Dê exemplos de tecnologias que tornam possível o trabalho
+                dos nômades digitais.
+            </h2>
+
+            <p>
+                Computadores, smartphones, internet, videoconferências,
+                armazenamento em nuvem, aplicativos de comunicação e
+                ferramentas de organização e gerenciamento de tarefas.
+            </p>
+
+        </section>
+
+
+        <!-- ================= PERGUNTA 3 ================= -->
+
+        <section class="caixa pergunta">
+
+            <h2>
+                3. Você conhece alguém que trabalha de modo remoto?
+                O que essa pessoa faz e onde ela trabalha?
+            </h2>
+
+            <p>
+                Sim. Uma pessoa pode trabalhar com programação, atendimento
+                ao cliente ou outras atividades digitais. Ela pode trabalhar
+                de casa, em um café ou em outro local com acesso à internet.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= RODAPÉ ================= -->
+
+    <footer>
+
+        🎀 Trabalho de S.O. — Nômades Digitais 🎀
+
+        <br><br>
+
+        Evelym Caroliny Felipe de Sousa 💗
+
+    </footer>
 
 </body>
 </html>
