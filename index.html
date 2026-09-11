@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>🎀 Quem são os nômades digitais? 🎀</title>
+<title>Quem são os nômades digitais?</title>
 
 <style>
 * {
@@ -16,176 +16,23 @@
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
-    background: linear-gradient(135deg, #ffd6e7, #ffb6d5, #ffe6f0);
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e7,
+        #ffb6d5,
+        #ffe6f0
+    );
+
     color: #5c2140;
     overflow-x: hidden;
 }
 
-/* ================= TELA DE SENHA ================= */
-
-#login {
-    position: fixed;
-    inset: 0;
-    z-index: 10000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-    background:
-        radial-gradient(circle at top, #ffeaf4, transparent 45%),
-        linear-gradient(135deg, #ffd6e7, #ffb6d5, #ffe6f0);
-}
-
-.login-box {
-    position: relative;
-    z-index: 2;
-
-    width: 90%;
-    max-width: 450px;
-    padding: 45px 30px;
-
-    text-align: center;
-
-    background: rgba(255,255,255,0.94);
-
-    border: 3px solid #ff69b4;
-    border-radius: 35px;
-
-    box-shadow:
-        0 0 10px #ff69b4,
-        0 0 25px #ff69b4,
-        0 0 50px #ff9fc6;
-}
-
-/* OLÁ EVELYM */
-
-.login-box h1 {
-    font-family: "Brush Script MT", cursive;
-    font-size: 58px;
-
-    color: #e83e8c;
-
-    text-shadow:
-        0 0 5px white,
-        0 0 10px #ff69b4,
-        0 0 20px #ff1493,
-        0 0 35px #ff69b4;
-
-    animation: brilho 1.5s infinite alternate;
-}
-
-@keyframes brilho {
-    from {
-        text-shadow:
-            0 0 5px white,
-            0 0 10px #ff69b4;
-    }
-
-    to {
-        text-shadow:
-            0 0 8px white,
-            0 0 20px #ff1493,
-            0 0 35px #ff69b4;
-    }
-}
-
-.login-box h2 {
-    margin-top: 8px;
-
-    font-family: "Brush Script MT", cursive;
-    font-size: 38px;
-
-    color: #c2185b;
-
-    text-shadow:
-        0 0 5px #ffb6d5,
-        0 0 15px #ff69b4;
-}
-
-.login-box p {
-    margin: 20px 0;
-
-    color: #7a3154;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.login-box input {
-    width: 100%;
-
-    padding: 15px;
-
-    border: 2px solid #ff9fc6;
-    border-radius: 25px;
-
-    outline: none;
-
-    font-size: 17px;
-    text-align: center;
-
-    background: #fff8fb;
-}
-
-.login-box input:focus {
-    border-color: #ff69b4;
-
-    box-shadow:
-        0 0 10px #ff69b4,
-        0 0 20px #ffb6d5;
-}
-
-.login-box button {
-    margin-top: 20px;
-
-    padding: 15px 40px;
-
-    border: none;
-    border-radius: 30px;
-
-    background: #e83e8c;
-
-    color: white;
-
-    font-size: 18px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 0 10px #ff69b4,
-        0 0 20px #ff9fc6;
-
-    transition: 0.3s;
-}
-
-.login-box button:hover {
-    transform: scale(1.1);
-
-    background: #c2185b;
-
-    box-shadow:
-        0 0 15px #ff1493,
-        0 0 35px #ff69b4;
-}
-
-#erro {
-    margin-top: 15px;
-
-    color: #c2185b;
-
-    font-weight: bold;
-}
-
-/* ================= SITE ================= */
-
-#site {
-    display: none;
-}
+/* ================= CABEÇALHO ================= */
 
 header {
     text-align: center;
-    padding: 40px 20px 25px;
+    padding: 50px 20px 30px;
 }
 
 header h1 {
@@ -197,19 +44,24 @@ header h1 {
 
     text-shadow:
         2px 2px 5px white,
-        0 0 15px #ff69b4;
+        0 0 15px #ff69b4,
+        0 0 30px #ff9fc6;
 }
 
 header p {
-    margin-top: 8px;
+    margin-top: 10px;
 
     font-size: 18px;
+
     color: #7a3154;
 }
+
+/* ================= CONTEÚDO ================= */
 
 .container {
     width: 90%;
     max-width: 950px;
+
     margin: auto;
 }
 
@@ -226,6 +78,15 @@ header p {
 
     box-shadow:
         0 8px 20px rgba(180,70,120,0.2);
+
+    transition: 0.3s;
+}
+
+.caixa:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 25px rgba(180,70,120,0.3);
 }
 
 .caixa h2 {
@@ -244,137 +105,65 @@ header p {
     text-align: justify;
 }
 
+/* ================= PERGUNTAS ================= */
+
 .pergunta h2 {
     color: #c2185b;
 
     font-size: 20px;
 }
 
+/* ================= RODAPÉ ================= */
+
 footer {
     text-align: center;
 
-    padding: 30px 15px;
+    padding: 35px 15px;
 
     color: #8a3158;
 
     font-weight: bold;
+
+    font-size: 16px;
 }
 
-/* ================= CHUVA DE LACINHOS ================= */
-
-.lacinho {
-    position: fixed;
-
-    top: -60px;
-
-    z-index: 99999;
-
-    pointer-events: none;
-
-    color: #ff69b4;
-
-    filter:
-        drop-shadow(0 0 4px #ff69b4)
-        drop-shadow(0 0 10px #ff1493)
-        drop-shadow(0 0 20px #ff69b4)
-        drop-shadow(0 0 30px #ff9fc6);
-
-    animation: cair linear forwards;
-}
-
-@keyframes cair {
-
-    0% {
-        transform:
-            translateY(-60px)
-            rotate(0deg)
-            scale(0.8);
-
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        transform:
-            translateY(110vh)
-            rotate(720deg)
-            scale(1.2);
-
-        opacity: 0;
-    }
-}
+/* ================= RESPONSIVO ================= */
 
 @media (max-width: 600px) {
-
-    .login-box h1 {
-        font-size: 45px;
-    }
-
-    .login-box h2 {
-        font-size: 30px;
-    }
 
     header h1 {
         font-size: 42px;
     }
 
+    header p {
+        font-size: 16px;
+    }
+
     .caixa {
         padding: 20px;
     }
+
+    .caixa h2 {
+        font-size: 21px;
+    }
+
+    .caixa p {
+        font-size: 16px;
+    }
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- ================= TELA DE ENTRADA ================= -->
-
-<div id="login">
-
-    <div class="login-box">
-
-        <h1>🎀 Olá, Evelym! 🎀</h1>
-
-        <h2>Seja bem-vinda! 💗</h2>
-
-        <p>
-            ✨ Digite a senha para entrar<br>
-            no seu trabalho sobre Nômades Digitais ✨
-        </p>
-
-        <input
-            type="password"
-            id="senha"
-            placeholder="💕 Digite sua senha"
-            onkeydown="teclaEnter(event)"
-        >
-
-        <button onclick="entrar()">
-            🎀 ENTRAR 🎀
-        </button>
-
-        <div id="erro"></div>
-
-    </div>
-
-</div>
-
-
-<!-- ================= CONTEÚDO ================= -->
-
-<div id="site">
+<!-- ================= CABEÇALHO ================= -->
 
 <header>
 
-    <!-- TÍTULO ALTERADO -->
-    <h1>🎀 Quem são os nômades digitais? 🎀</h1>
+    <h1>
+        🎀 Quem são os nômades digitais? 🎀
+    </h1>
 
     <p>
         Tecnologia, liberdade e novas formas de trabalhar
@@ -383,80 +172,85 @@ footer {
 </header>
 
 
+<!-- ================= CONTEÚDO ================= -->
+
 <main class="container">
 
 
 <section class="caixa">
 
-<h2>🌸 Quem são os nômades digitais?</h2>
+    <h2>
+        🌸 Quem são os nômades digitais?
+    </h2>
 
-<p>
-Os nômades digitais são profissionais que adotam um estilo
-de vida flexível e independente, aproveitando as tecnologias
-para trabalhar remotamente de qualquer lugar do mundo.
-</p>
+    <p>
+        Os nômades digitais são profissionais que adotam um estilo
+        de vida flexível e independente, aproveitando as tecnologias
+        para trabalhar remotamente de qualquer lugar do mundo.
+    </p>
 
-<br>
+    <br>
 
-<p>
-Esses profissionais valorizam a liberdade de escolher seus
-ambientes de trabalho, que podem variar desde seus domicílios
-até cafés acolhedores e salas de trabalho comunitárias.
-</p>
+    <p>
+        Esses profissionais valorizam a liberdade de escolher seus
+        ambientes de trabalho, que podem variar desde seus domicílios
+        até cafés acolhedores e salas de trabalho comunitárias.
+    </p>
 
-<br>
+    <br>
 
-<p>
-A capacidade de gerenciar tempo e espaço é fundamental para eles,
-permitindo um equilíbrio entre trabalho e estilo de vida.
-</p>
-
-</section>
-
-
-<section class="caixa pergunta">
-
-<h2>
-1. Como os nômades digitais se diferenciam de outros trabalhadores?
-</h2>
-
-<p>
-Os nômades digitais podem trabalhar de forma remota e não
-dependem de um local fixo. Eles utilizam a tecnologia para
-realizar suas atividades profissionais e possuem maior
-flexibilidade para escolher onde trabalhar.
-</p>
+    <p>
+        A capacidade de gerenciar tempo e espaço é fundamental para eles,
+        permitindo um equilíbrio entre trabalho e estilo de vida.
+    </p>
 
 </section>
 
 
 <section class="caixa pergunta">
 
-<h2>
-2. Dê exemplos de tecnologias que tornam possível o trabalho dos nômades digitais.
-</h2>
+    <h2>
+        1. Como os nômades digitais se diferenciam de outros trabalhadores?
+    </h2>
 
-<p>
-Computadores, smartphones, internet, videoconferências,
-armazenamento em nuvem, aplicativos de comunicação e
-ferramentas de organização e gerenciamento de tarefas.
-</p>
+    <p>
+        Os nômades digitais podem trabalhar de forma remota e não
+        dependem de um local fixo. Eles utilizam a tecnologia para
+        realizar suas atividades profissionais e possuem maior
+        flexibilidade para escolher onde trabalhar.
+    </p>
 
 </section>
 
 
 <section class="caixa pergunta">
 
-<h2>
-3. Você conhece alguém que trabalha de modo remoto?
-O que essa pessoa faz e onde ela trabalha?
-</h2>
+    <h2>
+        2. Dê exemplos de tecnologias que tornam possível o trabalho
+        dos nômades digitais.
+    </h2>
 
-<p>
-Sim. Uma pessoa pode trabalhar com programação, atendimento
-ao cliente ou outras atividades digitais. Ela pode trabalhar
-de casa, em um café ou em outro local com acesso à internet.
-</p>
+    <p>
+        Computadores, smartphones, internet, videoconferências,
+        armazenamento em nuvem, aplicativos de comunicação e
+        ferramentas de organização e gerenciamento de tarefas.
+    </p>
+
+</section>
+
+
+<section class="caixa pergunta">
+
+    <h2>
+        3. Você conhece alguém que trabalha de modo remoto?
+        O que essa pessoa faz e onde ela trabalha?
+    </h2>
+
+    <p>
+        Sim. Uma pessoa pode trabalhar com programação, atendimento
+        ao cliente ou outras atividades digitais. Ela pode trabalhar
+        de casa, em um café ou em outro local com acesso à internet.
+    </p>
 
 </section>
 
@@ -464,102 +258,17 @@ de casa, em um café ou em outro local com acesso à internet.
 </main>
 
 
+<!-- ================= RODAPÉ ================= -->
+
 <footer>
 
-🎀 Trabalho sobre Tecnologia e Nômades Digitais 🎀
+    🎀 Trabalho sobre Tecnologia e Nômades Digitais 🎀
 
-<br><br>
+    <br><br>
 
-Evelym Caroliny Felipe de Sousa 💗
+    Evelym Caroliny Felipe de Sousa 💗
 
 </footer>
-
-</div>
-
-
-<script>
-
-/* ================= SENHA ================= */
-
-function entrar() {
-
-    const senha =
-        document.getElementById("senha").value;
-
-    if (senha === "jimin") {
-
-        document.getElementById("login").style.display = "none";
-
-        document.getElementById("site").style.display = "block";
-
-        iniciarChuva();
-
-    } else {
-
-        document.getElementById("erro").innerHTML =
-            "💔 Senha incorreta! Tente novamente.";
-
-        document.getElementById("senha").value = "";
-
-    }
-}
-
-
-/* ENTER PARA ENTRAR */
-
-function teclaEnter(event) {
-
-    if (event.key === "Enter") {
-        entrar();
-    }
-
-}
-
-
-/* ================= LACINHO ================= */
-
-function criarLacinho() {
-
-    const lacinho =
-        document.createElement("div");
-
-    lacinho.className = "lacinho";
-
-    lacinho.textContent = "🎀";
-
-    lacinho.style.left =
-        Math.random() * 100 + "vw";
-
-    lacinho.style.fontSize =
-        (18 + Math.random() * 35) + "px";
-
-    lacinho.style.animationDuration =
-        (3 + Math.random() * 5) + "s";
-
-    document.body.appendChild(lacinho);
-
-    setTimeout(function() {
-
-        lacinho.remove();
-
-    }, 9000);
-}
-
-
-/* CHUVA DE LACINHOS NA TELA DE SENHA */
-
-setInterval(criarLacinho, 250);
-
-
-/* CHUVA CONTINUA DEPOIS DE ENTRAR */
-
-function iniciarChuva() {
-
-    setInterval(criarLacinho, 300);
-
-}
-
-</script>
 
 </body>
 </html>
