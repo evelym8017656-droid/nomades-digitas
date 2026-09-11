@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🌸 Nômades Digitais 🌸</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffd6e7, #ffb6d5, #ffe6f0);
+            color: #5c2140;
+            overflow-x: hidden;
+        }
+
+        /* CABEÇALHO */
+        header {
+            text-align: center;
+            padding: 45px 20px 30px;
+        }
+
+        header h1 {
+            font-family: "Brush Script MT", cursive;
+            font-size: 55px;
+            color: #d63384;
+            text-shadow: 2px 2px 5px white;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #7a3154;
+        }
+
+        /* CONTEÚDO */
+        .container {
+            width: 90%;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .introducao,
+        .pergunta {
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(180, 70, 120, 0.2);
+            border: 2px solid #ff9fc6;
+        }
+
+        .introducao h2 {
+            color: #d63384;
+            margin-bottom: 15px;
+            font-size: 27px;
+        }
+
+        .introducao p {
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .pergunta h2 {
+            color: #c2185b;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .pergunta p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* BOTÃO */
+        .botao {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #e83e8c;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            box-shadow: 0 5px 12px rgba(180, 40, 100, 0.3);
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            transform: scale(1.08);
+            background: #c2185b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #8a3158;
+            font-size: 14px;
+        }
+
+        /* CHUVA DE LACINHOS */
+        .lacinho {
+            position: fixed;
+            top: -50px;
+            font-size: 25px;
+            animation: cair linear forwards;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        @keyframes cair {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0.2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 40px;
+            }
+
+            .introducao,
+            .pergunta {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎀 Nômades Digitais 🎀</h1>
+        <p>Tecnologia, liberdade e novas formas de trabalhar</p>
+    </header>
+
+    <main class="container">
+
+        <section class="introducao">
+            <h2>🌸 Quem são os nômades digitais?</h2>
+
+            <p>
+                Os nômades digitais são profissionais que adotam um estilo
+                de vida flexível e independente, aproveitando as tecnologias
+                para trabalhar remotamente de qualquer lugar do mundo.
+                Esses profissionais valorizam a liberdade de escolher seus
+                ambientes de trabalho, que podem variar desde suas próprias
+                casas até cafés, espaços compartilhados ou outros lugares
+                apropriados para realizar suas atividades.
+            </p>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>
+                1. Como os nômades digitais se diferenciam de outros trabalhadores?
+            </h2>
+
+            <p>
+                Eles se diferenciam principalmente pela possibilidade de
+                trabalhar remotamente, sem depender de um local fixo.
+                Utilizam a tecnologia para realizar suas atividades
+                profissionais e possuem maior flexibilidade para escolher
+                onde trabalhar.
+            </p>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>
+                2. Dê exemplos de tecnologias que tornam possível o trabalho dos nômades digitais.
+            </h2>
+
+            <p>
+                Entre as principais tecnologias estão computadores,
+                smartphones, internet, plataformas de videoconferência,
+                armazenamento em nuvem, aplicativos de comunicação e
+                ferramentas de gerenciamento de tarefas e projetos.
+            </p>
+        </section>
+
+
+        <section class="pergunta">
+            <h2>
+                3. Você conhece alguém que trabalha de modo remoto? O que essa pessoa faz e onde ela trabalha?
+            </h2>
+
+            <p>
+                Sim. Um exemplo seria uma pessoa que trabalha com programação
+                ou atendimento ao cliente de forma remota. Ela pode realizar
+                suas atividades utilizando um computador e a internet,
+                trabalhando de casa, em um café ou em outro ambiente adequado.
+            </p>
+        </section>
+
+        <button class="botao" onclick="criarLacinhos()">
+            🎀 Mais lacinhos!
+        </button>
+
+    </main>
+
+    <footer>
+        💗 Trabalho sobre Tecnologia e Nômades Digitais 💗
+    </footer>
+
+
+    <script>
+        function criarLacinhos() {
+
+            const lacinho = document.createElement("div");
+
+            lacinho.classList.add("lacinho");
+
+            lacinho.innerHTML = "🎀";
+
+            lacinho.style.left = Math.random() * 100 + "vw";
+
+            lacinho.style.fontSize =
+                (15 + Math.random() * 25) + "px";
+
+            lacinho.style.animationDuration =
+                (3 + Math.random() * 5) + "s";
+
+            document.body.appendChild(lacinho);
+
+            setTimeout(() => {
+                lacinho.remove();
+            }, 8000);
+        }
+
+        /* Chuva automática de lacinhos */
+        setInterval(criarLacinhos, 350);
+    </script>
+
+</body>
+</html>
