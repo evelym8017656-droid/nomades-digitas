@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nômades Digitais</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffd6e7, #ffb6d5, #ffe6f0);
+            color: #5c2140;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 45px 20px 30px;
+        }
+
+        header h1 {
+            font-family: "Brush Script MT", cursive;
+            font-size: 55px;
+            color: #d63384;
+            text-shadow: 2px 2px 5px white;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #7a3154;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .introducao,
+        .pergunta {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 25px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(180, 70, 120, 0.2);
+            border: 2px solid #ff9fc6;
+        }
+
+        .introducao h2 {
+            color: #d63384;
+            margin-bottom: 15px;
+            font-size: 27px;
+        }
+
+        .introducao p,
+        .pergunta p {
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .pergunta h2 {
+            color: #c2185b;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .botao {
+            display: block;
+            margin: 30px auto;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #e83e8c;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+            box-shadow: 0 5px 12px rgba(180, 40, 100, 0.3);
+        }
+
+        .botao:hover {
+            background: #c2185b;
+            transform: scale(1.08);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #8a3158;
+            font-size: 15px;
+        }
+
+        /* CHUVA DE LACINHOS */
+        .lacinho {
+            position: fixed;
+            top: -50px;
+            pointer-events: none;
+            z-index: 9999;
+            animation: cair linear forwards;
+        }
+
+        @keyframes cair {
+            from {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 40px;
+            }
+
+            .introducao,
+            .pergunta {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎀 Nômades Digitais 🎀</h1>
+    <p>Tecnologia, liberdade e novas formas de trabalhar</p>
+</header>
+
+<main class="container">
+
+    <section class="introducao">
+        <h2>🌸 Quem são os nômades digitais?</h2>
+
+        <p>
+            Os nômades digitais são profissionais que adotam um estilo de
+            vida flexível e independente, utilizando a tecnologia para
+            trabalhar remotamente de diferentes lugares do mundo. Eles
+            valorizam a liberdade de escolher seus ambientes de trabalho,
+            como suas casas, cafés ou espaços compartilhados.
+        </p>
+    </section>
+
+    <section class="pergunta">
+        <h2>1. Como os nômades digitais se diferenciam de outros trabalhadores?</h2>
+
+        <p>
+            Eles podem trabalhar remotamente e não dependem de um local fixo.
+            Utilizam a tecnologia para realizar suas atividades profissionais,
+            tendo maior flexibilidade para escolher onde trabalhar.
+        </p>
+    </section>
+
+    <section class="pergunta">
+        <h2>2. Dê exemplos de tecnologias que tornam possível o trabalho dos nômades digitais.</h2>
+
+        <p>
+            Computadores, smartphones, internet, videoconferências,
+            armazenamento em nuvem, aplicativos de comunicação e ferramentas
+            de gerenciamento de tarefas são exemplos importantes.
+        </p>
+    </section>
+
+    <section class="pergunta">
+        <h2>3. Você conhece alguém que trabalha de modo remoto? O que essa pessoa faz e onde ela trabalha?</h2>
+
+        <p>
+            Um exemplo é uma pessoa que trabalha com programação ou
+            atendimento ao cliente. Ela pode realizar suas atividades usando
+            computador e internet, trabalhando de casa, em um café ou em
+            outro ambiente adequado.
+        </p>
+    </section>
+
+    <button class="botao" onclick="criarLacinhos()">
+        🎀 Mais lacinhos!
+    </button>
+
+</main>
+
+<footer>
+    💗 Trabalho sobre Tecnologia e Nômades Digitais 💗
+    <br><br>
+    <strong>Evelym Caroliny Felipe de Sousa</strong>
+</footer>
+
+<script>
+
+function criarLacinhos() {
+
+    const lacinho = document.createElement("div");
+
+    lacinho.className = "lacinho";
+
+    lacinho.textContent = "🎀";
+
+    lacinho.style.left = Math.random() * 100 + "vw";
+
+    lacinho.style.fontSize =
+        (18 + Math.random() * 25) + "px";
+
+    lacinho.style.animationDuration =
+        (3 + Math.random() * 4) + "s";
+
+    document.body.appendChild(lacinho);
+
+    setTimeout(function() {
+        lacinho.remove();
+    }, 8000);
+}
+
+/* Chuva automática */
+setInterval(criarLacinhos, 500);
+
+</script>
+
+</body>
+</html>
